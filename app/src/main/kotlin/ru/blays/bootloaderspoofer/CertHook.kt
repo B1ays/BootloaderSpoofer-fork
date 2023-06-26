@@ -9,11 +9,12 @@ class CertHook(private val hook: XC_MethodHook): XC_MethodHook() {
     @Suppress("UNCHECKED_CAST")
     override fun afterHookedMethod(param: MethodHookParam?) {
         try {
-            val certificate: List<Certificate>? = param?.resultOrThrowable as List<Certificate>?
-            certificate?.forEach { cert ->
+            val certificates = param!!.resultOrThrowable as Array<Certificate>
+            certificates.forEach { certificate ->
                 XposedHelpers.findAndHookMethod(
-                    cert::class.java,
+                    certificate::class.java,
                     "getExtensionValue",
+                    String::class.java,
                     hook
                 )
             }
