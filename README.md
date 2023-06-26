@@ -1,6 +1,6 @@
 # Bootloader spoof (Fork)
 
-This is a Fork of Xposed module to bypass the Bootloader unlock check rewritten in Kotlin.
+This is a Fork of Xposed module to spoof a locked bootloader in local attestations rewritten in Kotlin.
 Original module: [BootloaderSpoofer](https://github.com/chiteroman/BootloaderSpoofer "BootloaderSpoofer")
 
 ## Warning 
