@@ -1,0 +1,17 @@
+[versions]
+agp = "8.2.0-alpha09"
+api = "82"
+bcprov-lts8on = "2.73.2"
+guava = "32.0.0-android"
+kotlin = "1.9.0-RC"
+
+[libraries]
+api = { module = "de.robv.android.xposed:api", version.ref = "api" }
+bcprov-lts8on = { module = "org.bouncycastle:bcprov-lts8on", version.ref = "bcprov-lts8on" }
+guava = { module = "com.google.guava:guava", version.ref = "guava" }
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
+[bundles]
+
